@@ -1,0 +1,6 @@
+#!/bin/bash
+
+option=$(ls ~/pix | dmenu -l 10 -p "Which image?" -fn "Inconsolata-g:size=9" -nb "#282828" -nf "#a89984" -sb "#282828" -sf "#689d6a")
+
+echo $option
+sxiv ~/pix/$option

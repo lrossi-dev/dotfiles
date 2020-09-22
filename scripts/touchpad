@@ -1,0 +1,15 @@
+#!/bin/sh
+
+synaptics_id=$(xinput list --short | grep 'Synaptics' | awk '{print $5}' | tr -d -c 0-9)
+
+middle_click="$(xinput list-props $synaptics_id | grep 'Middle Emulation Enabled (' | awk '{print $5}' | tr -d -c 0-9)"
+natural_scroll="$(xinput list-props $synaptics_id | grep 'Natural Scrolling Enabled (' | awk '{print $5}' | tr -d -c 0-9)"
+tap_to_click="$(xinput list-props $synaptics_id | grep 'Tapping Enabled (' | awk '{print $4}' | tr -d -c 0-9)"
+
+echo $synaptics_id $middle_click $natural_scroll $tap_to_click
+
+xinput set-prop $synaptics_id $middle_click 1
+xinput set-prop $synaptics_id $natural_scroll 1
+xinput set-prop $synaptics_id $tap_to_click 1
+
+exit 0
