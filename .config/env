@@ -6,6 +6,7 @@ export TERMINAL=st
 export EDITOR=vim
 export BROWSER=firefox
 export WALLPAPER="$HOME"/pix/wal/city_toon.jpg
+export THEME=base16-dracula
 
 # XDG Base directory
 export XDG_CONFIG_HOME="$HOME"/.config
