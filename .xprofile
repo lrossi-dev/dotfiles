@@ -1,0 +1,10 @@
+#!/bin/sh
+
+setxkbmap br & 
+feh --bg-fill $WALLPAPER &
+$HOME/.local/bin/wal -t --theme $THEME
+$HOME/.local/bin/touchpad &
+#sudo pacman -Sy
+dwmblocks &
+picom -b &
+dunst &
