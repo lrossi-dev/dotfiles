@@ -8,6 +8,9 @@ export BROWSER=firefox
 export WALLPAPER="$HOME"/pix/wal/city_toon.jpg
 export THEME=base16-dracula
 
+#Lang related stuff
+export LANG=en_US.utf8
+
 # XDG Base directory
 export XDG_CONFIG_HOME="$HOME"/.config
 export XDG_CACHE_HOME="$HOME"/.cache
