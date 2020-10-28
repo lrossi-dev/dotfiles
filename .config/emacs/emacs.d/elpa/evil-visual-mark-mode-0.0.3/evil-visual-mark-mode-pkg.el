@@ -1,0 +1,2 @@
+;;; Generated package description from /home/lrossi/.config/emacs/emacs.d/elpa/evil-visual-mark-mode-0.0.3/evil-visual-mark-mode.el  -*- no-byte-compile: t -*-
+(define-package "evil-visual-mark-mode" "0.0.3" "Display evil marks on buffer" '((evil "1.0.9") (dash "2.10")) :commit "094ee37599492885ff3144918fcdd9b74dadaaa0" :keywords '("evil") :authors '(("Roman Gonzalez" . "romanandreg@gmail.com")) :maintainer '("Roman Gonzalez" . "romanandreg@gmail.com"))
