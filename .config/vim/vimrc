@@ -31,20 +31,20 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible
-filetype off
+"set nocompatible
+"filetype off
 
-set rtp+=~/.config/vim/plugin/Vundle.vim
-call vundle#begin()
+"set rtp+=~/.config/vim/plugin/Vundle.vim
+"call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
+"Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+"Plugin 'godlygeek/tabular'
+"Plugin 'plasticboy/vim-markdown'
 
-call vundle#end()
+"call vundle#end()
 
-filetype plugin indent on
+"filetype plugin indent on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => XDG Base Directory

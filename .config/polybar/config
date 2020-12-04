@@ -17,9 +17,9 @@
 ;==========================================================
 
 [colors]
-background = ${xrdb:color0:#222}
+background = ${xrdb:background:#222}
 background-alt = ${xrdb:color8:#444}
-foreground = ${xrdb:color7:#222}
+foreground = ${xrdb:foreground:#222}
 foreground-alt = ${xrdb:color15:#555}
 primary = ${xrdb:color4:#ffb52a}
 secondary = ${xrdb:color6:#e60053}
@@ -49,7 +49,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = "Ubuntu Mono:style=Regular:pixelsize=9;1"
+font-0 = "Liberation Mono:style=Regular:pixelsize=9;1"
 font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=8;2"
 font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=8;3"
 
@@ -98,7 +98,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = "Ubuntu Mono:style=Regular:pixelsize=11;1"
+font-0 = "Liberation Mono:style=Regular:pixelsize=11;1"
 font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=8;2"
 font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=8;3"
 

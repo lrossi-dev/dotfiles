@@ -7,7 +7,7 @@ inactive-dim-fixed = true;
 # Blurs
 #blur-background = true;
 #blur-background-frame = true;
-#blur-method = "kawase";
+blur-method = "kawase";
 #blur-strength = 5;
 #blur-background-fixed = true;
 #blur-backgroound-exclude = [
@@ -17,16 +17,12 @@ inactive-dim-fixed = true;
 #    "class_g = 'firefox'"
 #]
 
-# Rounded corners
-#rounded-borders = 1;
-#corner-radius = 5.0;
-
 # Shadows
 shadow = true;
 shadow-offset-x = -1;
 shadow-offset-y = -1
-shadow-radius = 10;
-shadow-opacity = 0.7;
+shadow-radius = 12;
+shadow-opacity = 0.8;
 shadow-exclude = [
     #"!focused",
     "name = 'Notification'",
