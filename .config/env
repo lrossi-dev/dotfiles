@@ -4,12 +4,15 @@
 export SHELL=/bin/zsh
 export TERMINAL=st
 export EDITOR=vim
-export BROWSER=firefox
-export WALLPAPER="$HOME"/pix/wal/city_toon.jpg
-export THEME=base16-dracula
+export BROWSER=brave
+export WALLPAPER="$HOME"/Pictures/winter-sunset.jpg
+export THEME=gruvbox
 
-#Lang related stuff
+# Lang related stuff
 export LANG=en_US.utf8
+#export LC_ALL=pt_BR.utf8
+
+export PATH="$PATH":/home/lrossi/.local/bin
 
 # XDG Base directory
 export XDG_CONFIG_HOME="$HOME"/.config
@@ -24,6 +27,5 @@ export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export ZDOTDIR="$HOME"/.config/zsh
 export HISTFILE="$XDG_DATA_HOME"/zsh/history
 
-
 # Vim
-export VIMINIT='source /home/lrossi/.config/vim/vimrc'
+# export VIMINIT='source /home/lrossi/.config/vim/vimrc'
