@@ -26,10 +26,6 @@ super + shift + m
 super + y
 	bspc node newest.marked.local -n newest.!automatic.local
 
-# swap the current node and the biggest window
-super + g
-	bspc node -s biggest.window
-
 #
 # state/flags
 #
@@ -75,6 +71,11 @@ super + {o,i}
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
+
+super + {_, shift +} g
+    { bspc config -d focused window_gap $(( $(bspc config -d focused window_gap) + 10 )), \
+    [ $(bspc config -d focused window_gap) -ge 10 ] && \
+    bspc config -d focused window_gap $(( $(bspc config -d focused window_gap) - 10 )) }
 
 #
 # preselect
@@ -134,16 +135,16 @@ super + {F12, F11}
     light {-A,-U} 5
 
 Print
-    scrot ~/pix/$(date '+%Y-%m-%d_%H:%M:%S').png
+    scrot ~/Pictures/$(date '+%Y-%m-%d_%H:%M:%S').png
 
 shift + Print
-    scrot -s ~/pix/$(date '+%Y-%m-%d_%H:%M:%S').png
+    scrot -s ~/Pictures/$(date '+%Y-%m-%d_%H:%M:%S').png
 
 super + x
     slock
 
 super + alt + r
-    reboot
+    shutdown -r now
 
 super + shift + x
     shutdown -h now
@@ -153,19 +154,19 @@ super + shift + x
 #          App shortcuts          #
 ###################################
 super + f
-    firefox
+    brave-browser
 
 super + e
     emacsclient -c
 
 super + r
-    st -e "ranger"
+    kitty -e "ranger"
 
 super + Return
-	st
+	kitty
 
 super + d
-	rofi -show run
+	dmenu_run
 
 super + m
-    st -e "neomutt"
+    kitty -e "neomutt"

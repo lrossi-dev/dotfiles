@@ -4,7 +4,7 @@
 # Functions and utils #
 #######################
 xresource() {
-    xrdb -query | grep -E "^(bspwm|\*)\.$1" | sed -r "s/^[^:]+:\s+//" | tail -n 1
+    xrdb -query | grep -E "^(bspwm|\*)\.?$1" | sed -r "s/^[^:]+:\s+//" | tail -n 1
 }
 
 ######################
@@ -18,13 +18,16 @@ if [[ "$(xrandr -q | grep -w connected | wc -l)" -eq 2 ]]; then
 else
     bspc monitor eDP1 -d 1 2 3 4 5
 fi
+bspc monitor $(xrandr -q | awk '/ connected/ {print $1}') -d 1 2 3 4 5 6 7 8 9
 
 pgrep -x sxhkd > /dev/null || sxhkd &
+pgrep -x picom > /dev/null || picom -CGb
 $HOME/.config/polybar/launch.sh
 xsetroot -cursor_name left_ptr
-pgrep -x dunst > /dev/null || dunst -lf "$(xresource foreground)" -nf "$(xresource foreground)" -cf "$(xresource foreground)" \
-    -lb "$(xresource background)" -nb "$(xresource background)" -cb "$(xresource background)" \
-    -lfr "$(xresource color3)" -nfr "$(xresource color6)" -cfr "$(xresource color1)" &
+feh --bg-fill /home/lrossi/Pictures/queensland.jpg
+#pgrep -x dunst > /dev/null || dunst -lf "$(xresource foreground)" -nf "$(xresource foreground)" -cf "$(xresource foreground)" \
+#    -lb "$(xresource background)" -nb "$(xresource background)" -cb "$(xresource background)" \
+#    -lfr "$(xresource color3)" -nfr "$(xresource color6)" -cfr "$(xresource color1)" &
 wmname LG3D
 
 #######################
@@ -33,21 +36,20 @@ wmname LG3D
 #COLORS="$HOME"/.cache/wal/colors.sh
 #[[ -s "$COLORS" ]] && source $COLORS
 
-bspc config focused_border_color "$(xresource color8)"
-bspc config normal_border_color  "$(xresource background)"
+bspc config focused_border_color "$(xresource color6)"
+bspc config normal_border_color  "$(xresource color1)"
 
 
 ########################
 #    General tweaks    #
 ########################
 bspc config border_width          1 
-bspc config window_gap            12
+bspc config window_gap            10
 bspc config split_ratio           0.52
 bspc config borderless_monocle    true
 bspc config single_monocle        true
 bspc config gapless_monocle       false
 bspc config focus_follows_pointer true
-
 
 ########################
 #         Rules        #
@@ -57,3 +59,5 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a gimp state=floating
 bspc rule -a steam state=floating
 bspc rule -a emacs state=tiling
+bspc rule -a Zathura state=tiled
+
